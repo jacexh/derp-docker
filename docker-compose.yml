@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  depr:
+    image: jacexh/derper
+    container_name: derper
+    restart: unless-stopped
+    environment:
+    - DERPER_DOMAIN=hub.foobar.com
+    ports:
+    - "443:443"
+    - "3478:3478"
