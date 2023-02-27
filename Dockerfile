@@ -6,6 +6,5 @@ COPY --from=builder /go/bin/derper /usr/local/bin
 COPY ./entrypoint.sh /usr/local/bin/entrypoint
 
 EXPOSE 443 3478 80
-ENV DERPER_DOMAIN foobar.com
 
 ENTRYPOINT [ "entrypoint" ]
