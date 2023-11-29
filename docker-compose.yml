@@ -1,7 +1,7 @@
-version: '3.7'
+version: '3.8'
 services:
   depr:
-    image: jacexh/derper
+    image: ghcr.io/jacexh/derp-docker:v1.54.0
     container_name: derper
     restart: unless-stopped
     environment:
