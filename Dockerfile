@@ -1,5 +1,6 @@
-FROM golang:1.20-alpine as builder
-RUN go install tailscale.com/cmd/derper@main
+FROM golang:1.21-alpine as builder
+ARG DEPR_VERSION=v1.54.0
+RUN go install tailscale.com/cmd/derper@${DEPR_VERSION}
 
 FROM alpine
 COPY --from=builder /go/bin/derper /usr/local/bin
